@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-background text-white font-sans antialiased;
+    background: radial-gradient(circle at top center, #2e1065 0%, #0a0a0a 60%);
+    min-height: 100vh;
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-glass backdrop-blur-md border border-white/10 shadow-xl rounded-2xl;
+    }
+
+    .glass-btn {
+        @apply bg-primary/80 hover:bg-primary backdrop-blur-sm transition-all duration-300 rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-primary/50;
+    }
+
+    .input-field {
+        @apply bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-secondary/50 focus:ring-1 focus:ring-secondary/50 transition-all w-full;
+    }
+}
